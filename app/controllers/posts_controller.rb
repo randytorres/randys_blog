@@ -2,13 +2,11 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
-  # GET /posts.json
   def index
     @posts = Post.all
   end
 
   # GET /posts/1
-  # GET /posts/1.json
   def show
 
   end
@@ -35,7 +33,6 @@ class PostsController < ApplicationController
   end
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
         if @post.update(post_params)
           redirect_to @post, notice: 'Post was successfully updated.' 
@@ -45,7 +42,6 @@ class PostsController < ApplicationController
   end
 
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     redirect_to posts_url
@@ -62,4 +58,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content)
     end
-end
+  

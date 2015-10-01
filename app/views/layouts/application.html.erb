@@ -15,15 +15,16 @@
 
     <body>
     <div class="container">
-    <div class="page-header">
-     
-     <ul class="nav nav-pills pull-right">
+     <div class="page-header">
+      <ul class="nav nav-pills pull-right">
        <li>
-         <%= link_to "Home", "/" %>
+         <%= link_to "Home", root_path %>
         </li>
 
         <li>
-         <%= link_to "About" , "/about" %>
+        <%= link_to "Manage Posts", posts_path %>
+        <li>
+         <%= link_to "About" , about_path %>
         </li>
         </ul>
         <h1>
