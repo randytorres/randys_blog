@@ -2,7 +2,7 @@
 <p>
   <h2>
       <div class="pull-right">
-        <%= form_for(Like.new) do |f| %>
+          <%= form_for(Like.new) do |f| %>
           <%= f.hidden_field :post_id, value: post.id %>
           <%= f.submit "☝", class: 'btn btn-danger' %>
         <% end %>
