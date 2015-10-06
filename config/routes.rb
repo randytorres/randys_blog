@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :likes, only: :create
 
   get "about" =>'pages#about'
 root 'pages#welcome'
